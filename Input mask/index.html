@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="text" placeholder="xxx-xxxx" name="phone_number" />
+    </div>
+
+    <script>
+      var input = document.querySelector("input[name=phone_number]");
+      input.addEventListener("input", function (e) {
+        var text = e.target.value;
+        if (text.length > 3) {
+          this.value = text
+            .split("")
+            .map(function (char, index) {
+              if (index == 2 && text[index + 1] != "-") return char + "-";
+              return char;
+            })
+            .join("");
+        }
+      });
+    </script>
+  </body>
+</html>
