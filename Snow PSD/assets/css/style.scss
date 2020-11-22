@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Playfair Display, serif;
+}
+
+// Common style
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// End Common style
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    &>.container {
+        height: 13vh;
+    }
+}
+
+.logo {
+    flex: 1;
+}
+
+.nav-logo {
+    width: 100px;
+}
+
+nav {
+    flex: 1;
+
+    & .nav-links {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+
+    & .nav-link {
+        text-decoration: none;
+        color: #bfbfbf;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.5s;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.banner {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+
+    &>.container {
+        position: relative;
+        height: 50vh;
+    }
+
+    .bg-banner div {
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .bg-banner>.bg-img {
+        background-image: url("/assets/images/home-7.jpg");
+    }
+
+    .bg-banner>.bg-img-overlay {
+        background-color: rgba(12, 12, 12, 0.6);
+    }
+
+    .subtitle-banner {
+        text-transform: uppercase;
+        color: white;
+        font-size: 0.93rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        font-family: 'Playfair Display SC', serif;
+    }
+
+    .title-banner {
+        color: white;
+        line-height: 1.18;
+        font-size: 3.2rem;
+        font-weight: 700;
+        font-family: 'Playfair Display SC', serif;
+    }
+
+    .banner-scroll-down {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        display: block;
+        border: white solid 1px;
+        opacity: 0.6;
+        // left: 50%;
+        bottom: 65px;
+        transition: opacity 0.5s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &>span {
+            line-height: 3;
+            color: white;
+        }
+    }
+}
+
+#about {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+
+    .container>h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    .container>p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
