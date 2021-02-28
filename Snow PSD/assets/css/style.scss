@@ -19,6 +19,7 @@ body {
 
 .d-flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .justify-content-between {
@@ -175,5 +176,13 @@ main {
 
     .container>p {
         font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.feature {
+    height: 300px;
+
+    .feature__item {
+        display: block;
     }
 }
